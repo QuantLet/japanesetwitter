@@ -1,7 +1,7 @@
 
 Name of Quantlet:         JapaneseTwitter
 
-Published in:             'Rによるデータマイニング入門 (Introduction to Datamining in R)'
+Published in:             'Introduction to Datamining in R'
 
 Description:              Textminig and visualization for tweets in Japanese
 
