@@ -1,14 +1,18 @@
-require(twitteR)
-require(ROAuth)
-require(base64enc)
-require(dplyr)
-require(ggplot2)
+# clear variables and close windows
+# clear variables and close windows
+rm(list = ls(all = TRUE))
+graphics.off()
+
+# install and load packages
+libraries = c("twitteR", "ROAuth", "base64enc", "dplyr", "ggplot2", 
+              "RMeCab", "wordcloud", "RColorBrewer", "igraph")
+lapply(libraries, function(x) if (!(x %in% installed.packages())) {
+  install.packages(x)
+})
+lapply(libraries, library, quietly = TRUE, character.only = TRUE)
+
 # pre install RMeCab for Win
 # install.packages("RMeCab", repos = "http://rmecab.jp/R")
-require(RMeCab)    
-require(wordcloud)
-require(RColorBrewer)
-require(igraph)
 
 # Twitter REST API
 # GET search/tweets
@@ -22,7 +26,6 @@ accessSecret = "prbXalyRt82kYIzYaxZQboyNSCXTvv2iL2x6tQQDSr0wr"
 
 setup_twitter_oauth(APIKey, APISecret, accessToken, accessSecret)
 # select 1:
-
 # change the key word(s) you want to search
 searchword  = "????????? ???"
 searchquery = iconv(paste0(searchword," AND -filter:links AND -RT"), to="UTF-8")
@@ -33,7 +36,7 @@ names(tw.df)
 
 # totalize of tweets
 # total number of tweets for each day
-tw.daily <- tw.df %>%
+tw.daily = tw.df %>%
   mutate(twdate=as.Date(created)) %>%
   group_by(twdate) %>% summarize(cnt = n())
 tw.daily
