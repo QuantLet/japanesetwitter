@@ -21,15 +21,15 @@ Output : Some plots of number of tweet in a week, Word Cloud and Network diagram
 
 ```
 
-![Picture1](network.png)
-
 ![Picture2](tw-daily.png)
 
 ![Picture3](tw-hourly.png)
 
+![Picture5](tw-wordcount.png)
+
 ![Picture4](tw-wordcloud.png)
 
-![Picture5](tw-wordcount.png)
+![Picture1](network.png)
 
 
 ### R Code:
