@@ -9,9 +9,9 @@ Name of Quantlet : JapaneseTwitter
 
 Published in : Introduction to Datamining in R
 
-Description : Textminig and visualization for tweets in Japanese
+Description : Textmining and visualization for tweets in Japanese
 
-Keywords : textminig, word cloud, network diagram
+Keywords : textmining, word cloud, network diagram
 
 Author[New] : Yoshiro Yamamoto
 
